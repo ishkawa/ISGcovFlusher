@@ -1,18 +1,20 @@
 Pod::Spec.new do |s|
-  s.platform     = :ios
-  s.name         = "ISGcovFlusher"
-  s.version      = "0.0.1"
-  s.summary      = "Test observer class which calls __gcov_flush() on completion of XCTests."
-  s.homepage     = "https://github.com/ishkawa/ISGcovFlusher"
-  s.source_files = "ISGcovFlusher/**/*.{h,m}"
-  s.framework    = "XCTest"
-  s.requires_arc = true
-  s.author       = {"Yosuke Ishikawa" => "y@ishkawa.org"}
-  s.source       = {
+  s.platform              = :ios
+  s.name                  = "ISGcovFlusher"
+  s.version               = "0.0.1"
+  s.summary               = "Test observer class which calls __gcov_flush() on completion of XCTests."
+  s.homepage              = "https://github.com/ishkawa/ISGcovFlusher"
+  s.source_files          = "ISGcovFlusher/**/*.{h,m}"
+  s.framework             = "XCTest"
+  s.ios.deployment_target = "4.3"
+  s.osx.deployment_target = "10.6"
+  s.requires_arc          = true
+  s.author                = {"Yosuke Ishikawa" => "y@ishkawa.org"}
+  s.source = {
     :git => "https://github.com/ishkawa/ISGcovFlusher.git",
     :tag => "0.0.1"
   }
-  s.license      = {
+  s.license = {
 	:type => 'MIT',
 	:text => <<-LICENSE
       Copyright (c) 2014 Yosuke Ishikawa
